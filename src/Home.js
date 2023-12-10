@@ -7,7 +7,7 @@ const Home = () => {
       <div className="home__container">
         <img
           className="home__image"
-          src="https://images.indianexpress.com/2020/11/amazon-prime-video-.jpg?w=640"
+          src="https://m.media-amazon.com/images/G/01/primevideo/seo/primevideo-seo-logo.png"
           alt=""
         />
         <div className="home__row">
