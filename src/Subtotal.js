@@ -1,7 +1,18 @@
+import { useSelector } from "react-redux";
 import "./Subtotal.css";
 import { NumericFormat } from "react-number-format";
 
 const Subtotal = () => {
+  const basket = useSelector((state) => state.basket);
+
+  const getSubtotalAmount = () => {
+    let amount = 0;
+    basket.map((item) => {
+      amount += item.price;
+    });
+    return amount;
+  };
+
   return (
     <div className="subtotal">
       Subtotal Component
@@ -10,7 +21,7 @@ const Subtotal = () => {
           return (
             <>
               <p>
-                Subtotal (0 items):<strong>0</strong>
+                Subtotal (0 items):<strong>{getSubtotalAmount()}</strong>
               </p>
               <small className="subtotal__gift">
                 <input type="checkbox" />
@@ -19,8 +30,7 @@ const Subtotal = () => {
             </>
           );
         }}
-        // value={getBasketTotal(basket)}
-        value={0}
+        value={getSubtotalAmount()}
         thousandSeparator=","
         decimalSeparator="."
         prefix="$"

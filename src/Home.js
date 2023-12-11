@@ -12,6 +12,7 @@ const Home = () => {
         />
         <div className="home__row">
           <Product
+            id={1}
             title="Stock Market Wisdom"
             price={19.99}
             image={"https://ttpl.imgix.net/9788194924661L.jpg"}
@@ -19,6 +20,7 @@ const Home = () => {
           />
 
           <Product
+            id={2}
             title="Earphones"
             price={20.99}
             image={
@@ -28,6 +30,7 @@ const Home = () => {
           />
 
           <Product
+            id={3}
             title="Black Dress"
             price={13.99}
             image={
@@ -38,6 +41,7 @@ const Home = () => {
         </div>
         <div className="home__row">
           <Product
+            id={4}
             title="Crockery Set"
             price={100}
             image={
@@ -47,6 +51,7 @@ const Home = () => {
           />
 
           <Product
+            id={5}
             title="Table"
             price={34.99}
             image={
@@ -56,6 +61,7 @@ const Home = () => {
           />
 
           <Product
+            id={6}
             title="TV"
             price={121.98}
             image={
@@ -65,6 +71,7 @@ const Home = () => {
           />
 
           <Product
+            id={7}
             title="iPhone"
             price={1299.99}
             image={
@@ -75,6 +82,7 @@ const Home = () => {
         </div>
         <div className="home__row">
           <Product
+            id={8}
             title="Heritage Vase"
             price={66.89}
             image={"https://folkways.in/wp-content/uploads/2020/07/A.jpg"}
@@ -82,6 +90,7 @@ const Home = () => {
           />
 
           <Product
+            id={9}
             title="Samsung Galaxy Book 3"
             price={83.33}
             image={
@@ -92,6 +101,7 @@ const Home = () => {
         </div>
         <div className="home__row">
           <Product
+            id={10}
             title="Macbook Pro"
             price={44}
             image={

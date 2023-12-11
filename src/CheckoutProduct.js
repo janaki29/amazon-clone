@@ -1,21 +1,14 @@
 import { useDispatch } from "react-redux";
-import "./Product.css";
-import { addToBasket } from "./actions";
+import "./CheckoutProduct.css";
+import { removeFromBasket } from "./actions";
+import { useEffect } from "react";
 // import image from "./images/StockMarket.jpg";
 
-const Product = ({ id, title, image, price, rating }) => {
+const CheckoutProduct = ({ id, title, image, price, rating }) => {
   const dispatch = useDispatch();
 
-  const addToBasketHanler = () => {
-    dispatch(
-      addToBasket({
-        id: id,
-        title: title,
-        image: image,
-        price: price,
-        rating: rating,
-      })
-    );
+  const removeFromBasketHandler = () => {
+    dispatch(removeFromBasket(id));
   };
 
   return (
@@ -34,9 +27,11 @@ const Product = ({ id, title, image, price, rating }) => {
             })}
         </div>
       </div>
-      <img src={image} />
-      <button onClick={addToBasketHanler}>Add to basket</button>
+      <div className="image__container">
+        <img src={image} height={"100px"} width={"100px"} />
+      </div>
+      <button onClick={removeFromBasketHandler}>Remove from basket</button>
     </div>
   );
 };
-export default Product;
+export default CheckoutProduct;
