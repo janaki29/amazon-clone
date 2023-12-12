@@ -19,7 +19,7 @@ const Checkout = () => {
         <div>
           <h2 className="checkout__title"> Your shopping basket</h2>
         </div>
-        <div className="basket__item">
+        <div className="basket__items">
           {basket.map((item) => {
             return (
               item.title !== "" && (
@@ -29,6 +29,7 @@ const Checkout = () => {
                   image={item.image}
                   price={item.price}
                   rating={item.rating}
+                  count={item.count}
                 />
               )
             );

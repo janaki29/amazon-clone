@@ -3,11 +3,15 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { getBasketTotal } from "./reducer";
 const Header = () => {
   const basket = useSelector((state) => state.basket);
   const getNumberOfItemsInBakset = () => {
-    // console.log(basket.length);
-    return basket?.length;
+    let basketCount = 0;
+    basket.map((item) => {
+      basketCount += item.count;
+    });
+    return basketCount;
   };
   return (
     <div className="header">
