@@ -1,4 +1,3 @@
-//start from 2.26.24
 import "./App.css";
 import Checkout from "./Checkout";
 import Header from "./Header";
@@ -7,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import { legacy_createStore } from "redux";
 import reducer from "./reducer";
+import Login from "./Login";
 
 const store = legacy_createStore(reducer);
 
@@ -15,10 +15,26 @@ function App() {
     <Provider store={store}>
       <Router>
         <div className="app">
-          <Header />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/login" element={<Login />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  <Header />
+                  <Home />
+                </>
+              }
+            />
+            <Route
+              path="/checkout"
+              element={
+                <>
+                  <Header />
+                  <Checkout />
+                </>
+              }
+            />
           </Routes>
         </div>
       </Router>
